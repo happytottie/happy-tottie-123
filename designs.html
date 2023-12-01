@@ -1,0 +1,316 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="imageFolder/tottie-triangle.png" type="image/x-icon">
+    <title>Happy Tottie</title>
+    <style>
+      body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Canva Sans', sans-serif;
+    overflow-x: hidden;
+    height: 50vh; 
+    width: 100%;
+    background-color: #f4f6fc;
+  }
+  
+  header {
+    background-color: #f2f2f2;
+    padding: 20px 0;
+    border-bottom: 3px solid #b1d4e0;
+  }
+  
+  
+      nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      margin-left: 25px;
+      }
+  
+      nav ul li {
+      display: inline;
+      margin-right: 20px;
+      }
+  
+      nav ul li:last-child {
+      margin-right: 0;
+      }
+  
+      nav ul li a {
+      text-decoration: none;
+      color: #2e266d;
+      font-size: 19px;
+      transition: color 0.3s ease;
+      }
+  
+      nav ul li a:hover {
+      color: violet;
+      }
+
+
+main {
+  width: 100%;
+  display:flex;
+  height: 91.7vh;
+}
+
+main .first-half {
+  width: 50%;
+  height: 100%;
+  position: relative;
+}
+
+main .first-half h1 {
+  text-align: center;
+  color: #2e266d;
+  font-size: 55px;
+}
+main .other-half {
+  width: 50%;
+  height: 100%;
+  background-color: #b1d4e0;
+}
+
+main .other-half p {
+  text-align: center;
+  font-size: 90px;
+  color:#2e266d;
+  font-weight: bolder;
+  display: flex;
+  justify-content:center;
+}
+
+.slider {
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+.slider {
+  width: 95%;
+  height: 500px;
+  overflow: hidden;
+}
+
+.slides {
+  width: 800%; 
+  height: 500px;
+  display: flex;
+  transition: 11s; 
+}
+
+.slides input {
+  display: none;
+}
+
+.slide {
+  width: 12.5%;
+  transition: 1s;
+}
+
+.slide img {
+  width: 400px;
+  height: 500px;
+  border-radius: 25px ;
+}
+
+.navigation-manual {
+  position: absolute;
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  bottom: 50px; 
+  left: 50%;
+  transform: translateX(-50%); 
+}
+.manual-btn {
+  border: 2px solid maroon;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.5s;
+  margin: 0 5px; 
+}
+
+.manual-btn:not(:last-child) {
+  margin-right: 10px;
+}
+
+.manual-btn:hover {
+  background: grey;
+}
+
+#radio1:checked ~ .first {
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+  margin-left: -12.5%;
+}
+
+#radio3:checked ~ .first {
+  margin-left: -25%;
+}
+
+#radio4:checked ~ .first {
+  margin-left: -37.5%;
+}
+
+#radio5:checked ~ .first {
+  margin-left: -50%;
+}
+
+#radio6:checked ~ .first {
+  margin-left: -62.5%;
+}
+
+#radio7:checked ~ .first {
+  margin-left: -75%;
+}
+
+#radio8:checked ~ .first {
+  margin-left: -87.5%;
+}
+
+.navigation-auto {
+  position: absolute;
+  display: flex;
+  width: 95%;
+  justify-content: center;
+  bottom: 50px; 
+  left: 50%; 
+  transform: translateX(-50%); 
+}
+
+.navigation-auto div {
+  border: 2px solid maroon;
+  padding: 5px;
+  border-radius: 10px;
+  transition: 0.5s;
+  margin: 0 5px; 
+}
+
+
+.navigation-auto div:not(:last-child) {
+  margin-right: 10px;
+}
+
+#radio1:checked ~ .slider .navigation-auto .auto-btn1 .first,
+#radio2:checked ~ .slider .navigation-auto .auto-btn2 .first,
+#radio3:checked ~ .slider .navigation-auto .auto-btn3 .first,
+#radio4:checked ~ .slider .navigation-auto .auto-btn4 .first,
+#radio5:checked ~ .slider .navigation-auto .auto-btn5 .first,
+#radio6:checked ~ .slider .navigation-auto .auto-btn6 .first,
+#radio7:checked ~ .slider .navigation-auto .auto-btn7 .first,
+#radio8:checked ~ .slider .navigation-auto .auto-btn8 {
+  background: grey;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="intro.html">INTRO</a></li>
+            <li><a href="designs.html">DESIGNS</a></li>
+            <li><a href="goal.html">GOAL</a></li>
+            <li><a href="contacts.html">CONTACTS</a></li>
+          </ul>
+        </nav>
+      </header>  
+
+      <main>
+        <div class="first-half">
+          <h1>Our Designs</h1>
+
+          <div class="event-container">
+            <div class="slider">
+                <div class="slides">
+                      <input type="radio" name="radio-btn" id="radio1">
+                    <input type="radio" name="radio-btn" id="radio2">
+                    <input type="radio" name="radio-btn" id="radio3">
+                    <input type="radio" name="radio-btn" id="radio4">
+                    <input type="radio" name="radio-btn" id="radio5">
+                    <input type="radio" name="radio-btn" id="radio6">
+                    <input type="radio" name="radio-btn" id="radio7">
+                    <input type="radio" name="radio-btn" id="radio8">
+        
+                    <div class="slide first">
+                        <img src="./imageFolder/design2.jpeg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="./imageFolder/design5.jpeg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="./imageFolder/tao6.jpeg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="./imageFolder/design4.jpeg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="./imageFolder/design3.jpeg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="./imageFolder/tao2.jpeg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="./imageFolder/design1.jpeg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="./imageFolder/tao3.png" alt="">
+                    </div>
+
+                
+
+                <div class="navigation-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                    <div class="auto-btn4"></div>
+                    <div class="auto-btn5"></div>
+                    <div class="auto-btn6"></div>
+                    <div class="auto-btn7"></div>
+                    <div class="auto-btn8"></div>
+                </div>
+        
+                <div class="navigation-manual">
+                    <label for="radio1" class="manual-btn"></label>
+                    <label for="radio2" class="manual-btn"></label>
+                    <label for="radio3" class="manual-btn"></label>
+                    <label for="radio4" class="manual-btn"></label>
+                    <label for="radio5" class="manual-btn"></label>
+                    <label for="radio6" class="manual-btn"></label>
+                    <label for="radio7" class="manual-btn"></label>
+                    <label for="radio8" class="manual-btn"></label>
+                </div>
+            </div>
+          </div>
+        </div>
+          </div>
+        </div>
+        <div class="other-half">
+          <p>"Be Trendy, <br>
+          Look Classy, <br>
+          Grab Our <br>
+          Tottie"</p>
+        </div>
+      </main>
+      
+
+      <script>
+        var counter = 1;
+        setInterval(function(){ 
+        document.getElementById('radio' + counter).checked = true;
+        counter ++;
+        if(counter > 8){
+            counter = 1;
+        }
+        }, 3000);
+    </script>
+</body>
+</html>
